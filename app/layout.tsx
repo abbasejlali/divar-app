@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ShabnamFont } from "./utils/shabnamFont";
+import { ShabnamFont } from "@/utils/shabnamFont";
 
 export const metadata: Metadata = {
   title: "دیوار | عباس اجلالی",
