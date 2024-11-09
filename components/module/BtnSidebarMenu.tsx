@@ -33,7 +33,7 @@ function BtnSidebarMenu() {
       <div
         id="drawer-navigation"
         className={`fixed top-0  ${
-          open ? "left-full" : "left-[150%]"
+          open ? "left-full" : "left-[180%]"
         } z-40 w-64 h-screen px-4 py-8 overflow-y-auto border-l border-solid border-gray-200  transition-all -translate-x-full bg-white dark:bg-gray-800`}
         aria-labelledby="drawer-navigation-label"
       >
