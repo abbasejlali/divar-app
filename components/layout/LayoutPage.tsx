@@ -10,7 +10,7 @@ import BtnSidebarMenu from "../module/BtnSidebarMenu";
 function LayoutPage({ children }: { children: React.ReactNode }) {
   return (
     <div className=" container max-w-7xl mx-auto md:p-10 p-5 ">
-      <header className="bg-white border-gray-200 dark:bg-gray-900 mt-4">
+      <header className="bg-white  border-gray-200 dark:bg-gray-900 mt-4">
         <nav className="max-w-screen-xl flex flex-wrap items-center justify-between md:flex-row flex-row-reverse mx-auto py-4">
           <Link
             href="https://github.com/abbasejlali"
