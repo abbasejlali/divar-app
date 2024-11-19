@@ -5,8 +5,8 @@ import { cookies } from "next/headers";
 
 async function RefreshTokenValidatClient(): Promise<
   | {
-      success: Boolean;
-      message: String;
+      success: boolean;
+      message: string;
     }
   | undefined
 > {

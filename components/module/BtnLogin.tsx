@@ -18,7 +18,7 @@ function BtnLogin() {
           if (res?.success) setValidation(true);
           setIsLoading(false);
         })
-        .catch((err) => console.log("errrr"));
+        .catch(() => console.log("errrr"));
     };
 
     validation();
