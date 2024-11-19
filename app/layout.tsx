@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ShabnamFont } from "@/utils/shabnamFont";
 import ToastProvider from "@/utils/ToastProvider";
+import ReactQueryProvider from "@/libs/ReactQueryProvider";
 
 export const metadata: Metadata = {
   title: "دیوار | عباس اجلالی",
@@ -16,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body className={`${ShabnamFont.className} antialiased`}>
-        <ToastProvider>{children}</ToastProvider>
+        <ReactQueryProvider>
+          <ToastProvider>{children}</ToastProvider>
+        </ReactQueryProvider>
       </body>
     </html>
   );

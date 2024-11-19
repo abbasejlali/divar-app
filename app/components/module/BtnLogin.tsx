@@ -21,8 +21,8 @@ function BtnLogin() {
         .catch(() => console.log("errrr"));
     };
 
+    data();
     validation();
-    console.log(data());
   }, []);
   return (
     <>

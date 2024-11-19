@@ -1,11 +1,7 @@
 "use server";
 
+import { ContactFormData } from "@/typescript/interface";
 import { cookies } from "next/headers";
-
-interface ContactFormData {
-  phone: string;
-  code: string;
-}
 
 async function LoginActionClient(data: ContactFormData) {
   console.log("Form data received:", data);

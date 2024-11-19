@@ -1,15 +1,11 @@
 "use client";
 
 import LoginActionClient from "@/app/actionserver/LoginActionClient";
+import { ContactFormData } from "@/typescript/interface";
 import { errorAlert, successAlert } from "@/utils/alerts";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-
-type Inputs = {
-  phone: string;
-  code: string;
-};
 
 function LoginPage() {
   const router = useRouter();
@@ -18,9 +14,9 @@ function LoginPage() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<Inputs>();
+  } = useForm<ContactFormData>();
 
-  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+  const onSubmit: SubmitHandler<ContactFormData> = async (data) => {
     const { phone, code } = data;
     try {
       const response = await LoginActionClient(data);
