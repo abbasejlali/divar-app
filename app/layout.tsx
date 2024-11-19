@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ShabnamFont } from "@/utils/shabnamFont";
-import LayoutPage from "@/components/layout/LayoutPage";
+import LayoutPage from "@/app/components/layout/LayoutPage";
 import ToastProvider from "@/utils/ToastProvider";
 
 export const metadata: Metadata = {

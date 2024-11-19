@@ -1,4 +1,4 @@
-import LoginPage from "@/components/template/LoginPage";
+import LoginPage from "@/app/components/template/LoginPage";
 import ValidationUserServer from "../actionserver/ValidationUserServer";
 import { permanentRedirect } from "next/navigation";
 
