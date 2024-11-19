@@ -11,4 +11,20 @@ interface AdsType {
   images: FileList;
 }
 
-export { type ContactFormData, type AdsType };
+interface MyAdsType {
+  _id: string;
+  userId: string;
+  amount: number;
+  category: string;
+  coordinate: [null, null];
+  images: [string];
+  options: {
+    title: string;
+    content: string;
+    city: string;
+  };
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+}
+export { type ContactFormData, type AdsType, type MyAdsType };
