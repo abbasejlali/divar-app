@@ -35,20 +35,20 @@ async function LoginActionClient(data: ContactFormData) {
       });
       const data = await res.json();
       const { accessToken, refreshToken } = data;
-      cookies().set({
-        name: "accessToken",
-        value: accessToken,
-        httpOnly: true,
-        path: "/",
-        maxAge: 5 * 60 * 1000, // 5 min
-      });
-      cookies().set({
-        name: "refreshToken",
-        value: refreshToken,
-        httpOnly: true,
-        path: "/",
-        maxAge: 864000, // 10 day
-      });
+      if (accessToken && refreshToken) {
+        cookies().set({
+          name: "accessToken",
+          value: accessToken,
+          httpOnly: true,
+          maxAge: 5 * 60 * 1000, // 5 min
+        });
+        cookies().set({
+          name: "refreshToken",
+          value: refreshToken,
+          httpOnly: true,
+          maxAge: 48 * 60 * 60 * 1000, // 48 h
+        });
+      }
       return { success: true, message: "با موفقیت وارد سایت شدید" };
     } catch (err) {
       console.log(err);

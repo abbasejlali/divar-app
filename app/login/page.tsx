@@ -1,6 +1,12 @@
 import LoginPage from "@/components/template/LoginPage";
+import ValidationUserServer from "../actionserver/ValidationUserServer";
+import { permanentRedirect } from "next/navigation";
 
-function Login() {
+async function Login() {
+  const data = await ValidationUserServer();
+
+  if (data?.success) permanentRedirect("/");
+
   return <LoginPage />;
 }
 

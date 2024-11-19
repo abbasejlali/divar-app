@@ -6,6 +6,7 @@ import { LogoMainSvg } from "@/public/imgs/CustomSvg";
 
 // Module
 import BtnSidebarMenu from "../module/BtnSidebarMenu";
+import BtnLogin from "../module/BtnLogin";
 
 function LayoutPage({ children }: { children: React.ReactNode }) {
   return (
@@ -20,18 +21,7 @@ function LayoutPage({ children }: { children: React.ReactNode }) {
             <LogoMainSvg StyleSvg="w-[66px] h-[41px]" />
           </Link>
           <div className="flex md:order-2 gap-3 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <Link
-              href="/login"
-              className="text-white hidden md:block transition-all bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              ورود
-            </Link>
-            <Link
-              href="/"
-              className="text-white hidden md:block  transition-all bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-base px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              ثبت آگهی
-            </Link>
+            <BtnLogin />
             <BtnSidebarMenu />
           </div>
           <div

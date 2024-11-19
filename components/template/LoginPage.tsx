@@ -1,6 +1,6 @@
 "use client";
 
-import LoginActionClient from "@/actionserver/LoginActionClient";
+import LoginActionClient from "@/app/actionserver/LoginActionClient";
 import { errorAlert, successAlert } from "@/utils/alerts";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
