@@ -1,5 +1,10 @@
 import HomePage from "@/app/components/template/HomePage";
+import LayoutPage from "./components/layout/LayoutPage";
 
-export default async function Home() {
-  return <HomePage />;
+export default function Home() {
+  return (
+    <LayoutPage>
+      <HomePage />
+    </LayoutPage>
+  );
 }
