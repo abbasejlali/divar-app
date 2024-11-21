@@ -11,7 +11,7 @@ interface AdsType {
   images: FileList;
 }
 
-interface MyAdsType {
+interface AdvertisementType {
   _id: string;
   userId: string;
   amount: number;
@@ -39,6 +39,6 @@ interface CategoryType {
 export {
   type ContactFormData,
   type AdsType,
-  type MyAdsType,
+  type AdvertisementType,
   type CategoryType,
 };

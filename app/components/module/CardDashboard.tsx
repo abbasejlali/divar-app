@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MyAdsType } from "@/typescript/interface";
+import { AdvertisementType } from "@/typescript/interface";
 
-function CardDashboard({ data }: { data: MyAdsType }) {
+function CardDashboard({ data }: { data: AdvertisementType }) {
   const {
     images,
     options: { title, content },
@@ -19,7 +19,7 @@ function CardDashboard({ data }: { data: MyAdsType }) {
         height={300}
       />
       <div className="p-5">
-        <Link href={`/ads/${_id}`}>
+        <Link href={`/advertisements/${_id}`}>
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {title}
           </h5>
@@ -28,7 +28,7 @@ function CardDashboard({ data }: { data: MyAdsType }) {
           {content}
         </p>
         <Link
-          href={`/ads/${_id}`}
+          href={`/advertisements/${_id}`}
           className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           جزئیات بیشتر

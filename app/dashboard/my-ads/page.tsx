@@ -1,5 +1,5 @@
 import MyAdsPage from "@/app/components/template/MyAdsPage";
-import { MyAdsType } from "@/typescript/interface";
+import { AdvertisementType } from "@/typescript/interface";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
@@ -15,7 +15,7 @@ async function MyAds() {
       cache: "no-store",
       headers,
     });
-    const { posts }: { posts: MyAdsType[] } = await res.json();
+    const { posts }: { posts: AdvertisementType[] } = await res.json();
 
     return <MyAdsPage data={posts} />;
   }
