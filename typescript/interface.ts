@@ -27,4 +27,18 @@ interface MyAdsType {
   updatedAt: string;
   __v: number;
 }
-export { type ContactFormData, type AdsType, type MyAdsType };
+
+interface CategoryType {
+  _id: string;
+  name: string;
+  slug: string;
+  icon: string;
+  parents: [];
+  children: [];
+}
+export {
+  type ContactFormData,
+  type AdsType,
+  type MyAdsType,
+  type CategoryType,
+};

@@ -8,7 +8,7 @@ import { callapi } from "@/libs/helpers/callApi";
 import { successAlert } from "@/utils/alerts";
 
 // typescript
-import { AdsType } from "@/typescript/interface";
+import { AdsType, CategoryType } from "@/typescript/interface";
 
 // react query
 import { useQuery } from "@tanstack/react-query";
@@ -112,7 +112,7 @@ function AddAdsPage() {
             })}
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           >
-            {data?.data.map((item: any) => (
+            {data?.data.map((item: CategoryType) => (
               <option key={item._id} value={`${item._id}`}>
                 {item.name}
               </option>
